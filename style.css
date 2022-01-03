@@ -1,0 +1,61 @@
+:root {
+ /* ### Primary */
+
+--red: hsl(0, 100%, 74%); 
+--green: hsl(154, 59%, 51%);
+/* ### Accent */
+
+--blue: hsl(248, 32%, 49%);
+/* ### Neutral */
+
+--darkBlue: hsl(249, 10%, 26%); 
+--grayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    width: 20.7rem;
+    height: 57.4rem;
+    background-color:var(--red);
+    padding: 4.425rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+    background-image: url(/images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+}
+ /* ---HEADER--- */
+header {
+    margin-bottom: 4.3rem;
+}
+.card header h1 {
+    font-size: 1.62rem;
+    color: white;
+    padding-bottom: 0.13rem;
+}
+.card header p {
+    color: white;
+    font-size: 16.1px;
+}
+
+/* ---MAIN--- */
+.card main .btn-blue  {
+    padding: 1.2rem;
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+    margin-bottom: 1.4rem;
+    color: white;
+}
+form {
+    background-color: white;
+    padding: 1rem;
+    
+}
+form p {
+    font-size: 0.8rem;
+    text-align: center;
+}
