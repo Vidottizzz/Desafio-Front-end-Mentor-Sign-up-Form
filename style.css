@@ -1,61 +1,110 @@
 :root {
- /* ### Primary */
+  /* ### Primary */
 
---red: hsl(0, 100%, 74%); 
---green: hsl(154, 59%, 51%);
-/* ### Accent */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* ### Accent */
 
---blue: hsl(248, 32%, 49%);
-/* ### Neutral */
+  --blue: hsl(248, 32%, 49%);
+  /* ### Neutral */
 
---darkBlue: hsl(249, 10%, 26%); 
---grayishBlue: hsl(246, 25%, 77%);
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 .card {
-    width: 20.7rem;
-    height: 57.4rem;
-    background-color:var(--red);
-    padding: 4.425rem 1.5rem 2rem 1.5rem;
-    text-align: center;
-    background-image: url(/images/bg-intro-mobile.png);
-    background-repeat: no-repeat;
+  width: 20.7rem;
+  height: 57.4rem;
+  background-color: var(--red);
+  padding: 4.425rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  background-image: url(/images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
 }
- /* ---HEADER--- */
+/* ---HEADER--- */
 header {
-    margin-bottom: 4.3rem;
+  margin-bottom: 3.75rem;
+  width: 100%;
+  margin-top: 1.6rem;
 }
 .card header h1 {
-    font-size: 1.62rem;
-    color: white;
-    padding-bottom: 0.13rem;
+  font-size: 1.85rem;
+  color: white;
+  padding-bottom: 0.13rem;
 }
 .card header p {
-    color: white;
-    font-size: 16.1px;
+  color: white;
+  font-size: 18.61px;
+  line-height: 1.65rem;
+  font-weight: 400;
 }
 
 /* ---MAIN--- */
-.card main .btn-blue  {
-    padding: 1.2rem;
-    background-color: var(--blue);
-    border-radius: 0.5rem;
-    margin-bottom: 1.4rem;
-    color: white;
+.card main .btn-blue {
+  padding: 1.7rem;
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+  margin-bottom: 1.45rem;
+  color: white;
+  box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  padding: 1.27rem 5rem 1.27rem 5rem;
+  line-height: 1.5rem;
 }
+
+.card main .btn-blue span {
+  font-weight: 400;
+}
+
 form {
-    background-color: white;
-    padding: 1rem;
-    
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.1);
 }
 form p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+form input {
+  border-radius: 0.3rem;
+  padding: 1.2rem;
+  width: 82%;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border: solid 0.1px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+form input:first-child {
+  margin-top: 0.4rem;
+}
+form button {
+    padding: 1.1rem;
+    border-radius: 0.25rem;
+    border: solid 0.1px rgba(0, 0, 0, 0.1);
+    background-color: var(--green);
+    color: white;
+    font-size: 0.95rem;
+    width: 95%;
+    font-weight: 600;
+}
+form p {
+    font-size: 0.735rem;
     text-align: center;
+    line-height: 1.25rem;
+    margin: 0.5rem 1.9rem 0.7rem 1.9rem;
+    color: var(--grayishBlue);
+    
+    
+}
+form p span {
+    color: var(--red);
+    font-weight: 700;
 }
