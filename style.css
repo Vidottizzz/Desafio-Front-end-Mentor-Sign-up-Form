@@ -11,6 +11,10 @@
   --darkBlue: hsl(249, 10%, 26%);
   --grayishBlue: hsl(246, 25%, 77%);
 }
+.back-red {
+  border: 1px solid red;
+  
+}
 
 body {
   padding: 0;
@@ -59,10 +63,6 @@ header {
   padding: 1.2rem;
   line-height: 1.5rem;
 }
-main form button:hover {
-  cursor: pointer;
-
-}
 
 .card main .btn-blue:hover {
   cursor: pointer;
@@ -103,6 +103,12 @@ form button {
   width: 95%;
   font-weight: 600;
 }
+
+main form button:hover {
+  cursor: pointer;
+  background-color: rgba(56, 204, 140, 0.725);;
+
+}
 form p {
   font-size: 0.735rem;
   text-align: center;
@@ -126,7 +132,7 @@ form p span:hover {
     background-image: url(/images/bg-intro-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 115.96rem;
+    width: 116.5rem;
     height: 55.9rem;
     display: flex;
     /* display: grid;
@@ -160,16 +166,16 @@ form p span:hover {
   main form {
     padding: 2rem 0rem 0rem 0rem;
     width: 43rem;
-    height: 35.5rem;
+    height: 34.5rem;
   }
   main form button {
     width: 90.7%;
-    padding: 1.85rem;
+    padding: 1.625rem;
   }
 
   main form input {
     margin-bottom: 1.7rem;
-    padding: 1.65rem 1.85rem 1.65rem 1.85rem;
+    padding: 1.525rem 1.85rem 1.525rem 1.85rem;
   }
   .card main .btn-blue {
     padding: 1.6rem;
