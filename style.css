@@ -70,13 +70,31 @@ header {
 .card main .btn-blue span {
   font-weight: 400;
 }
+main {
+  position: relative;
 
+}
 form {
   background-color: white;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.1);
 }
+
+.err-img {
+  display: block;
+  position: relative;
+  bottom: 30rem;
+  padding-bottom: 4.5rem;
+  left: 37rem;
+}
+.show {
+   opacity: 1;
+}
+.hide {
+  opacity: 0;
+}
+
 form p {
   font-size: 0.8rem;
   text-align: center;
