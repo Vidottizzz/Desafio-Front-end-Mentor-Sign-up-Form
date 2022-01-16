@@ -80,19 +80,48 @@ form {
   border-radius: 0.5rem;
   box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.1);
 }
+.p-error {
+color: var(--red);
+}
+.p-error:last-child{
 
-.err-img {
-  display: block;
+}
+.p-email-error {
+color: var(--red);
+padding: 0;
+margin: 0;
+}
+main #err-img1 {
   position: relative;
-  bottom: 30rem;
-  padding-bottom: 4.5rem;
-  left: 37rem;
+  bottom: 30.5rem;
+  left: 19rem;
+}
+main #err-img2 {
+  position: relative;
+  bottom: 24.5rem;
+  left: 17.26rem;
+}
+main #err-img3 {
+  position: relative;
+  bottom: 18.5rem;
+  left: 15.5rem;
+}
+main #err-img4 {
+  position: relative;
+  bottom: 12.2rem;
+  left: 13.72rem;
 }
 .show {
    opacity: 1;
 }
 .hide {
   opacity: 0;
+}
+.show-display {
+  display: flex;
+}
+.hide-display {
+  display: none;
 }
 
 form p {
@@ -192,7 +221,7 @@ form p span:hover {
   }
 
   main form input {
-    margin-bottom: 1.7rem;
+    margin-bottom: 1.9rem;
     padding: 1.525rem 1.85rem 1.525rem 1.85rem;
   }
   .card main .btn-blue {

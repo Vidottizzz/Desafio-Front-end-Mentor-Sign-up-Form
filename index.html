@@ -42,6 +42,7 @@
                     class="input"
                     id= "email"
                     >
+                    <p class="p-email-error hide-display">Looks like this is not an email</p>
                     <input
                     type="password"
                     placeholder="Password"
@@ -49,12 +50,16 @@
                     >
                     <button class="form-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
                     <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
-                    <img class="err-img hide" src="/images/icon-error.svg" alt="">
-                    <img class="err-img hide" src="/images/icon-error.svg" alt="">
-                    <img class="err-img hide" src="/images/icon-error.svg" alt="">
-                    <img class="err-img hide" src="/images/icon-error.svg" alt="">
+                    <img id="err-img1" class="err-img" src="/images/icon-error.svg" alt="">
+                    <img id="err-img2" class="err-img"  src="/images/icon-error.svg" alt="">
+                    <img id="err-img3" class="err-img" src="/images/icon-error.svg" alt="">
+                    <img id="err-img4" class="err-img" src="/images/icon-error.svg" alt="">
 
-                    <p class="p-error"></p>
+                    <p class="p-error hide">First Name cannot be empty</p>
+                    <p class="p-error hide">Last Name cannot be empty</p>
+                    <p class="p-error hide">Email Name cannot be empty</p>
+                    <p class="p-error hide">Password Name cannot be empty</p>
+
                   
                     
                 </form>
