@@ -27,7 +27,7 @@
 
     let formEngine = (id, index, message) => {
 
-        if(id.value.trim() === "" ) {
+        if(id.value.trim() === "") {
            errorMessage[index].innerHTML = message;
            id.classList.add('bg-image');
            id.classList.add('error-red');
@@ -38,5 +38,17 @@
             id.classList.remove('error-red'); 
         }
 
+        if(email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+            errorMessage[2].innerHTML = message;
+           email.classList.add('bg-image');
+           email.classList.add('error-red');
+           
+        }
+        else {
+            errorMessage[index].innerHTML = '';
+            email.classList.remove('bg-image');
+            email.classList.remove('error-red'); 
+        }
 
+        id.value.indexOf('@') == -1 || id.value.indexOf('.') == -1
     };
