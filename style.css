@@ -11,10 +11,6 @@
   --darkBlue: hsl(249, 10%, 26%);
   --grayishBlue: hsl(246, 25%, 77%);
 }
-.back-red {
-  border: 1px solid red;
-  
-}
 
 body {
   padding: 0;
@@ -23,9 +19,14 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
+.error-message {
+  padding: 0;
+  margin: 0;
+  padding-right: 1.3rem;
+}
 .card {
   width: 20.7rem;
-  height: 57.4rem;
+  height: 56.5rem;
   background-color: var(--red);
   padding: 4.425rem 1.5rem 2rem 1.5rem;
   text-align: center;
@@ -79,49 +80,26 @@ form {
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0px 9px 0px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
-.p-error {
-color: var(--red);
-}
-.p-error:last-child{
 
-}
-.p-email-error {
-color: var(--red);
-padding: 0;
-margin: 0;
-}
-main #err-img1 {
-  position: relative;
-  bottom: 30.5rem;
-  left: 19rem;
-}
-main #err-img2 {
-  position: relative;
-  bottom: 24.5rem;
-  left: 17.26rem;
-}
-main #err-img3 {
-  position: relative;
-  bottom: 18.5rem;
-  left: 15.5rem;
-}
-main #err-img4 {
-  position: relative;
-  bottom: 12.2rem;
-  left: 13.72rem;
-}
-.show {
-   opacity: 1;
-}
-.hide {
+.error-icon {
+  position: absolute;
+  bottom: 29rem;
+  padding: 2.35rem;
+  left: 35rem;
+  z-index: 50;
   opacity: 0;
+} 
+.error-message {
+  color: var(--red);
+  font-size: 11px;
+  text-align: right;
+  font-style: italic;
 }
-.show-display {
-  display: flex;
-}
-.hide-display {
-  display: none;
+
+.error-red {
+  border: 1px solid red;
 }
 
 form p {
@@ -132,7 +110,7 @@ form input {
   border-radius: 0.3rem;
   padding: 1.2rem;
   width: 82%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
   font-weight: 700;
   border: solid 0.1px rgba(0, 0, 0, 0.1);
   font-size: 0.9rem;
@@ -149,6 +127,7 @@ form button {
   font-size: 0.95rem;
   width: 95%;
   font-weight: 600;
+  margin-top: 0.5rem;
 }
 
 main form button:hover {
@@ -170,17 +149,22 @@ form p span {
 form p span:hover {
   cursor: pointer;
 }
+.bg-image {
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box, content-box;
+}
 
 @media only screen and (min-width: 1700px) {
-  body {
-  }
+
   .card {
     
     background-image: url(/images/bg-intro-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 116.5rem;
-    height: 55.9rem;
+    width: 117rem;
+    height: 56.5rem;
     display: flex;
     /* display: grid;
     grid-template-columns: 1fr 1fr;
@@ -190,7 +174,7 @@ form p span:hover {
     width: 45rem;
     margin: auto;
     text-align: start;
-    padding: 13rem 0rem 0rem 4.5rem;
+    padding: 11rem 0rem 0rem 4.5rem;
     margin: 5rem 0rem auto 10rem;
   }
   .card header p {
@@ -213,7 +197,7 @@ form p span:hover {
   main form {
     padding: 2rem 0rem 0rem 0rem;
     width: 43rem;
-    height: 34.5rem;
+    height: 100%;
   }
   main form button {
     width: 90.7%;
@@ -221,8 +205,11 @@ form p span:hover {
   }
 
   main form input {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1rem;
     padding: 1.525rem 1.85rem 1.525rem 1.85rem;
+  }
+  .error-message {
+    padding-right: 3rem;
   }
   .card main .btn-blue {
     padding: 1.6rem;
@@ -231,5 +218,14 @@ form p span:hover {
   main form p {
     font-size: 0.9rem;
     margin-top: 1.2rem;
+    padding-bottom: 2rem;
   }
+
+  .bg-image {
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box, content-box;
+}
+ 
 }

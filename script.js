@@ -1,58 +1,42 @@
-// // O input não pode estar vazio, e o e-mail tem que conter as caracteristicas de um e-mail
-// const el = e.target;
-// console.log(el);
+    let id = (id) => document.getElementById(id);
 
-const allInput = document.querySelectorAll('.input');
-const formBtn = document.querySelector('.form-btn');
-const inptEmail = document.querySelector('#email');
-const errImg = document.querySelectorAll('.err-img');
-const pError = document.querySelectorAll('.p-error');
-const pEmailError = document.querySelector('.p-email-error');
+    let classes = (classes) => document.getElementsByClassName(classes);
 
+    // IDs (Inputs e Form)
 
-formBtn.addEventListener('click', (e) => {
+    let firstname = id('firstname'),
+        lastname = id('lastname'),
+        email = id('email'),
+        password = id('password'),
+        form = id('form');
 
-    for (i = 0; i < allInput.length; i++) {
-        e.preventDefault();
-        let allInputs = allInput[i];
-        let allImgs = errImg[i];
-        let allP = pError[i];
+    // CLASSES
 
-        if (allInputs.value === "") {
-            allInput[i].classList.add('back-red');
-            allImgs.classList.add('show');
-            allImgs.classList.remove('hide');
-            allP.classList.add('show');
-            allP.classList.remove('hide');
-        } else {
-            allInputs.classList.remove('back-red');
-            allImgs.classList.remove('show');
-            allImgs.classList.add('hide');
-            allP.classList.add('hide');
-            allP.classList.remove('show');
+    let  errorMessage = classes('error-message');
+
+    // EVENT LISTENER 
+
+    form.addEventListener('submit', (e) => {
+         e.preventDefault();
+
+        formEngine(firstname, 0, 'First Name cannot be empty');
+        formEngine(lastname, 1, 'Last Name cannot be empty');
+        formEngine(email, 2, ' Looks like this is not an email');
+        formEngine(password, 3, 'password cannot be empty');
+    })
+
+    let formEngine = (id, index, message) => {
+
+        if(id.value.trim() === "" ) {
+           errorMessage[index].innerHTML = message;
+           id.classList.add('bg-image');
+           id.classList.add('error-red');
+        }
+        else {
+            errorMessage[index].innerHTML = '';
+            id.classList.remove('bg-image');
+            id.classList.remove('error-red'); 
         }
 
-    }
 
-
-
-
-    if (inptEmail.value.indexOf('@') == -1 || inptEmail.value.indexOf('.') == -1) {
-        pEmailError.classList.add('show-display');
-        pEmailError.classList.remove('hide-display');
-
-        allInput[i].classList.add('back-red');
-        allImgs.classList.add('show');
-        allImgs.classList.remove('hide');
-
-
-    } else {
-        pEmailError.classList.add('hide');
-        pEmailError.classList.remove('show');
-        allInputs.classList.remove('back-red');
-        allImgs.classList.remove('show');
-        allImgs.classList.add('hide');
-
-    }
-})
-
+    };
